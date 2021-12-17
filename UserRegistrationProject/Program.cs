@@ -28,3 +28,11 @@ if (num.ValidateMobileNumber(number)==true)
     Console.WriteLine("Mobile number eccepted");
 else
     Console.WriteLine("Please enter a valid number");
+Console.WriteLine("Enter 8 character password");
+var pwd = Console.ReadLine();
+if (num.ValidatePasswordRule1(pwd)==true)
+    Console.WriteLine("Password eccepted");
+else
+    Console.WriteLine("Invalid");
+
+Console.WriteLine("Enter 8 character password should have atleast 1 uppercase");
