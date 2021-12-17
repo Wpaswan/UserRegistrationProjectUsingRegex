@@ -37,8 +37,16 @@ else
 
 Console.WriteLine("Enter 8 character password should have atleast 1 uppercase");
 var pwd2 = Console.ReadLine();
-if (num.ValidatePasswordRule2(pwd)==true)
+if (num.ValidatePasswordRule2(pwd2)==true)
     Console.WriteLine("Password eccepted");
 else
     Console.WriteLine("Invalid");
+
+Console.WriteLine("Enter 8 character password should have atleast 1 numeric character");
+var pwd3 = Console.ReadLine();
+if (num.ValidatePasswordRule3(pwd3)==true)
+    Console.WriteLine("Password eccepted");
+else
+    Console.WriteLine("Invalid");
+
 
