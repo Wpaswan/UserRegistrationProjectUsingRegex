@@ -17,6 +17,7 @@ namespace UserRegistrationProject
         public static string regex_passwordRule2 = "^(?=.*[A-Z])[A-Za-z0-9]{8,}$";
         public static string regex_passwordRule3 = "^(?=.[A-Z])(?=.[0-9])[a-zA-Z0-9]{8,}$";
         public static string regex_passwordRule4 = "^(?=.[A-Z])(?=.[0-9])(?=.+[!@#$%^&*])[a-zA-Z0-9]{8,}$";
+        public static string regex_emailsample = "^[\\w!#$%&'+/=?`{|}~^-]+(?:\\.[\\w!#$%&'+/=?`{|}~^-]+)*@(?:([0-9-]{1}|[a-zA-Z]{3,5})\\.)+[a-zA-Z]{2,3}$";
         public bool ValidateFirstName(string uName)
         {
             return Regex.IsMatch(uName, FirsName);
@@ -61,5 +62,13 @@ namespace UserRegistrationProject
 
 
         }
+        public bool ValidateAnyEmail(string uName)
+        {
+            return Regex.IsMatch(uName, regex_emailsample);
+
+
+
+        }
+
     }
 }
