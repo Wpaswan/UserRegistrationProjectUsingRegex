@@ -48,5 +48,12 @@ if (num.ValidatePasswordRule3(pwd3)==true)
     Console.WriteLine("Password eccepted");
 else
     Console.WriteLine("Invalid");
+Console.WriteLine("Enter 8 character password should have atleast 1 numeric character");
+var pwd4 = Console.ReadLine();
+if (num.ValidatePasswordRule4(pwd4)==true)
+    Console.WriteLine("Password eccepted");
+else
+    Console.WriteLine("Invalid");
+
 
 

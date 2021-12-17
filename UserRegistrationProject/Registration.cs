@@ -16,6 +16,7 @@ namespace UserRegistrationProject
         public static string regex_passwordRule1 = "^[a-zA-Z0-9]{8,}$";
         public static string regex_passwordRule2 = "^(?=.*[A-Z])[A-Za-z0-9]{8,}$";
         public static string regex_passwordRule3 = "^(?=.[A-Z])(?=.[0-9])[a-zA-Z0-9]{8,}$";
+        public static string regex_passwordRule4 = "^(?=.[A-Z])(?=.[0-9])(?=.+[!@#$%^&*])[a-zA-Z0-9]{8,}$";
         public bool ValidateFirstName(string uName)
         {
             return Regex.IsMatch(uName, FirsName);
@@ -49,6 +50,13 @@ namespace UserRegistrationProject
         public bool ValidatePasswordRule3(string uName)
         {
             return Regex.IsMatch(uName, regex_passwordRule3);
+
+
+
+        }
+        public bool ValidatePasswordRule4(string uName)
+        {
+            return Regex.IsMatch(uName, regex_passwordRule4);
 
 
 
