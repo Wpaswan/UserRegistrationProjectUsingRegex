@@ -12,6 +12,7 @@ namespace UserRegistrationProject
         public static string FirsName = "^[A-Z]{1}[a-zA-Z0-9]{2,29}$";
         public static string LastName = "^[A-Z]{1}[a-zA-Z0-9]{2,29}$";
         public static string regex_email = "^[a-z0-9]+(.[a-z0-9]+)?@[a-z]+[.][a-z]{2,3}(.[a-z]{2})?$";
+        public static string regex_mobile = "^[1-9][0-9]{1,2}[ ][0-9]{10}$";
         public bool ValidateFirstName(string uName)
         {
             return Regex.IsMatch(uName, FirsName);
@@ -23,6 +24,10 @@ namespace UserRegistrationProject
         public bool ValidateEmail(string uName)
         {
             return Regex.IsMatch(uName, regex_email);
+        }
+        public bool ValidateMobileNumber(string uName)
+        {
+            return Regex.IsMatch(uName, regex_mobile);
         }
     }
 }
